@@ -93,7 +93,7 @@ fn convert_to_ascii_bytes(
     }
 }
 
-/// Converts a base64 character into its binary representation.
+/// Takes a base64 character and converts it into a base64 byte representation.
 pub fn get_byte(character: char) -> Result<Character, error::Error> {
     let char_code = character as u32;
     if char_code > 127 {
