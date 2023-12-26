@@ -39,6 +39,7 @@ pub fn decode(input: &str) -> Result<String, error::Error> {
     Ok(final_word)
 }
 
+/// Takes an array and checks its length. Will panic if size does not equal 4.
 fn convert_to_ascii_bytes_from_array(
     bytes: &[Character],
 ) -> Result<[Option<char>; 3], error::Error> {
@@ -101,7 +102,7 @@ pub fn get_byte(character: char) -> Result<Character, error::Error> {
     get_byte_from_byte(&(char_code as u8))
 }
 
-/// Converts a base64 character as a byte into its binary representation.
+/// Takes a base64 char_code and converts it into a base64 byte representation.
 fn get_byte_from_byte(char_code: &u8) -> Result<Character, error::Error> {
     let char_code = *char_code;
     match char_code {
