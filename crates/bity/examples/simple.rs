@@ -1,6 +1,7 @@
 use bity::Bity;
 use serde::Deserialize;
 
+#[allow(dead_code)]
 #[derive(Bity, Deserialize)]
 struct Tester {
     #[bit_order(little)]

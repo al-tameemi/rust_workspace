@@ -12,7 +12,7 @@ pub struct TargetStruct {
 #[cfg_attr(feature = "debug", derive(Debug))]
 #[derive(Debug)]
 
-struct Field {
+pub(crate) struct Field {
     pub(crate) name: String,
     pub(crate) field_type: syn::Type,
     /// Attributes must maintain their order.
@@ -78,7 +78,7 @@ impl FromStr for Endianness {
         } else if s.to_lowercase().eq("big") {
             Ok(Endianness::Big)
         } else {
-            Err(()).unwrap()
+            Err(())
         }
     }
 }
