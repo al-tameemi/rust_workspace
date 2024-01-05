@@ -1,0 +1,15 @@
+[package]
+name        = "bity"
+version     = "0.1.0"
+edition     = "2021"
+description = "Was meant to be used to manipulate bytes and bits in a field. It doesn't work currently. Maybe in the future."
+
+[lib]
+proc-macro = true
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+syn         = { version = "2.0.43", features = ["extra-traits"] }
+quote       = "1.0.33"
+serde       = { version = "*", features = ["derive"] }
+proc-macro2 = "1.0.73"
